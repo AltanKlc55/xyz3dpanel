@@ -1,151 +1,45 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 146;
-exports.ids = [146];
+exports.id = "pages/api/yazicilar";
+exports.ids = ["pages/api/yazicilar"];
 exports.modules = {
 
-/***/ 2764:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "mysql2/promise":
+/*!*********************************!*\
+  !*** external "mysql2/promise" ***!
+  \*********************************/
+/***/ ((module) => {
 
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "I": () => (/* binding */ query)
-});
-
-;// CONCATENATED MODULE: external "mysql2/promise"
-const promise_namespaceObject = require("mysql2/promise");
-var promise_default = /*#__PURE__*/__webpack_require__.n(promise_namespaceObject);
-;// CONCATENATED MODULE: ./src/lib/db.js
-
-async function query({ query , values =[]  }) {
-    const dbconnection = await promise_default().createConnection({
-        host: "localhost",
-        database: "pixwarag_db",
-        user: "pixwarag_user",
-        password: "569155Sam.",
-        charset: "utf8mb4"
-    });
-    try {
-        const [results] = await dbconnection.execute(query, values);
-        dbconnection.end();
-        return results;
-    } catch (error) {
-        throw Error(error.message);
-        return {
-            error
-        };
-    }
-}
-
+module.exports = require("mysql2/promise");
 
 /***/ }),
 
-/***/ 5511:
+/***/ "(api)/./src/lib/db.js":
+/*!***********************!*\
+  !*** ./src/lib/db.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ handler)
-/* harmony export */ });
-/* harmony import */ var src_lib_db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2764);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"query\": () => (/* binding */ query)\n/* harmony export */ });\n/* harmony import */ var mysql2_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mysql2/promise */ \"mysql2/promise\");\n/* harmony import */ var mysql2_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mysql2_promise__WEBPACK_IMPORTED_MODULE_0__);\n\nasync function query({ query , values =[]  }) {\n    const dbconnection = await mysql2_promise__WEBPACK_IMPORTED_MODULE_0___default().createConnection({\n        host: \"localhost\",\n        database: \"test\",\n        user: \"root\",\n        password: \"\",\n        charset: \"utf8mb4\"\n    });\n    try {\n        const [results] = await dbconnection.execute(query, values);\n        dbconnection.end();\n        return results;\n    } catch (error) {\n        throw Error(error.message);\n        return {\n            error\n        };\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9zcmMvbGliL2RiLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFtQztBQUU1QixlQUFlQyxLQUFLLENBQUMsRUFBRUEsS0FBSyxHQUFFQyxNQUFNLEVBQUcsRUFBRSxHQUFFLEVBQUU7SUFFaEQsTUFBTUMsWUFBWSxHQUFHLE1BQU1ILHNFQUFzQixDQUFDO1FBQzlDSyxJQUFJLEVBQUVDLFdBQWtDO1FBQ3hDRyxRQUFRLEVBQUVILE1BQXNDO1FBQ2hESyxJQUFJLEVBQUVMLE1BQWtDO1FBQ3hDTyxRQUFRLEVBQUVQLEVBQXNDO1FBQ2hEUyxPQUFPLEVBQUUsU0FBUztLQUNyQixDQUFDO0lBRUYsSUFBSTtRQUNBLE1BQU0sQ0FBQ0MsT0FBTyxDQUFDLEdBQUcsTUFBTWIsWUFBWSxDQUFDYyxPQUFPLENBQUNoQixLQUFLLEVBQUVDLE1BQU0sQ0FBQztRQUMzREMsWUFBWSxDQUFDZSxHQUFHLEVBQUUsQ0FBQztRQUNuQixPQUFPRixPQUFPLENBQUM7SUFDbkIsRUFFQSxPQUFPRyxLQUFLLEVBQUU7UUFDVixNQUFNQyxLQUFLLENBQUNELEtBQUssQ0FBQ0UsT0FBTyxDQUFDLENBQUM7UUFDM0IsT0FBTztZQUFFRixLQUFLO1NBQUUsQ0FBQztJQUNyQixDQUFDO0FBRUwsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL21hdGVyaW8tbXVpLXJlYWN0LW5leHRqcy1hZG1pbi10ZW1wbGF0ZS1mcmVlLy4vc3JjL2xpYi9kYi5qcz83ZjlhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBteXNxbCBmcm9tIFwibXlzcWwyL3Byb21pc2VcIjtcclxuXHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBxdWVyeSh7IHF1ZXJ5LCB2YWx1ZXMgPSBbXSB9KSB7XHJcblxyXG4gICAgY29uc3QgZGJjb25uZWN0aW9uID0gYXdhaXQgbXlzcWwuY3JlYXRlQ29ubmVjdGlvbih7XHJcbiAgICAgICAgaG9zdDogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfSE9TVCxcclxuICAgICAgICBkYXRhYmFzZTogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfREFUQUJBU0UsXHJcbiAgICAgICAgdXNlcjogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfVVNFUixcclxuICAgICAgICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfUEFTU1dPUkQsXHJcbiAgICAgICAgY2hhcnNldDogJ3V0ZjhtYjQnLFxyXG4gICAgfSk7XHJcblxyXG4gICAgdHJ5IHtcclxuICAgICAgICBjb25zdCBbcmVzdWx0c10gPSBhd2FpdCBkYmNvbm5lY3Rpb24uZXhlY3V0ZShxdWVyeSwgdmFsdWVzKTtcclxuICAgICAgICBkYmNvbm5lY3Rpb24uZW5kKCk7XHJcbiAgICAgICAgcmV0dXJuIHJlc3VsdHM7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgIHRocm93IEVycm9yKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgIHJldHVybiB7IGVycm9yIH07XHJcbiAgICB9XHJcblxyXG59Il0sIm5hbWVzIjpbIm15c3FsIiwicXVlcnkiLCJ2YWx1ZXMiLCJkYmNvbm5lY3Rpb24iLCJjcmVhdGVDb25uZWN0aW9uIiwiaG9zdCIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19NWVNRTF9IT1NUIiwiZGF0YWJhc2UiLCJORVhUX1BVQkxJQ19NWVNRTF9EQVRBQkFTRSIsInVzZXIiLCJORVhUX1BVQkxJQ19NWVNRTF9VU0VSIiwicGFzc3dvcmQiLCJORVhUX1BVQkxJQ19NWVNRTF9QQVNTV09SRCIsImNoYXJzZXQiLCJyZXN1bHRzIiwiZXhlY3V0ZSIsImVuZCIsImVycm9yIiwiRXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./src/lib/db.js\n");
 
-async function handler(req, res) {
-    if (req.method === "GET") {
-        const hizmetler = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
-            query: "SELECT * FROM tbl_yazicilar",
-            values: []
-        });
-        res.status(200).json({
-            hizmetler: hizmetler
-        });
-    }
-    if (req.method === "POST") {
-        const datas = req.body;
-        const baslik = datas.yaziciBasligi;
-        const icerik = datas.yaziciIcerigi;
-        const banner = datas.banner;
-        const img = datas.img;
-        let message = "";
-        const addHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
-            query: "INSERT INTO tbl_yazicilar (name,content,banner,img) VALUES (?,?,?,?)",
-            values: [
-                baslik,
-                icerik,
-                banner,
-                img
-            ]
-        });
-        if (addHizmet.insertId) {
-            message = "ok";
-        } else {
-            message = "no";
-        }
-        let sektorler = {
-            hizmetId: addHizmet.insertId,
-            hizmetbaslik: datas.sektorBasligi
-        };
-        res.status(200).json({
-            response: {
-                message: message,
-                sektorler: sektorler
-            }
-        });
-    }
-    if (req.method === "DELETE") {
-        const datas1 = req.body;
-        let message1 = "";
-        const dellHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
-            query: "DELETE FROM tbl_yazicilar WHERE id = ?",
-            values: [
-                datas1.id
-            ]
-        });
-        if (dellHizmet) {
-            message1 = "ok";
-        } else {
-            message1 = "no";
-        }
-        res.status(200).json({
-            response: {
-                message: message1
-            }
-        });
-    }
-    if (req.method === "PUT") {
-        let message2 = "";
-        const datas2 = req.body;
-        const baslik1 = datas2.yaziciBasligi;
-        const icerik1 = datas2.yaziciIcerigi;
-        const banner1 = datas2.banner;
-        const img1 = datas2.img;
-        const id = datas2.id;
-        const updateHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
-            query: "UPDATE tbl_yazicilar SET name = ?, content = ?, banner = ?, img = ? WHERE id = ?",
-            values: [
-                baslik1,
-                icerik1,
-                banner1,
-                img1,
-                id
-            ]
-        });
-        const result = updateHizmet.affectedRows;
-        if (result) {
-            message2 = "ok";
-        } else {
-            message2 = "no";
-        }
-        res.status(200).json({
-            response: {
-                message: message2,
-                sektorler: result
-            }
-        });
-    }
-}
+/***/ }),
 
+/***/ "(api)/./src/pages/api/yazicilar.js":
+/*!************************************!*\
+  !*** ./src/pages/api/yazicilar.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var src_lib_db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/lib/db */ \"(api)/./src/lib/db.js\");\n\nasync function handler(req, res) {\n    if (req.method === \"GET\") {\n        const hizmetler = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"SELECT * FROM tbl_yazicilar\",\n            values: []\n        });\n        res.status(200).json({\n            hizmetler: hizmetler\n        });\n    }\n    if (req.method === \"POST\") {\n        const datas = req.body;\n        const baslik = datas.yaziciBasligi;\n        const icerik = datas.yaziciIcerigi;\n        const banner = datas.banner;\n        const img = datas.img;\n        let message = \"\";\n        const addHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"INSERT INTO tbl_yazicilar (name,content,banner,img) VALUES (?,?,?,?)\",\n            values: [\n                baslik,\n                icerik,\n                banner,\n                img\n            ]\n        });\n        if (addHizmet.insertId) {\n            message = \"ok\";\n        } else {\n            message = \"no\";\n        }\n        let sektorler = {\n            hizmetId: addHizmet.insertId,\n            hizmetbaslik: datas.sektorBasligi\n        };\n        res.status(200).json({\n            response: {\n                message: message,\n                sektorler: sektorler\n            }\n        });\n    }\n    if (req.method === \"DELETE\") {\n        const datas1 = req.body;\n        let message1 = \"\";\n        const dellHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"DELETE FROM tbl_yazicilar WHERE id = ?\",\n            values: [\n                datas1.id\n            ]\n        });\n        if (dellHizmet) {\n            message1 = \"ok\";\n        } else {\n            message1 = \"no\";\n        }\n        res.status(200).json({\n            response: {\n                message: message1\n            }\n        });\n    }\n    if (req.method === \"PUT\") {\n        let message2 = \"\";\n        const datas2 = req.body;\n        const baslik1 = datas2.yaziciBasligi;\n        const icerik1 = datas2.yaziciIcerigi;\n        const banner1 = datas2.banner;\n        const img1 = datas2.img;\n        const id = datas2.id;\n        const updateHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"UPDATE tbl_yazicilar SET name = ?, content = ?, banner = ?, img = ? WHERE id = ?\",\n            values: [\n                baslik1,\n                icerik1,\n                banner1,\n                img1,\n                id\n            ]\n        });\n        const result = updateHizmet.affectedRows;\n        if (result) {\n            message2 = \"ok\";\n        } else {\n            message2 = \"no\";\n        }\n        res.status(200).json({\n            response: {\n                message: message2,\n                sektorler: result\n            }\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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TUMsSUFBRyxHQUFHUCxNQUFLLENBQUNPLEdBQUc7UUFDckIsTUFBTVUsRUFBRSxHQUFHakIsTUFBSyxDQUFDaUIsRUFBRTtRQUVqQixNQUFNQyxZQUFZLEdBQUcsTUFBTTNCLGlEQUFLLENBQUM7WUFDN0JBLEtBQUssRUFBRSxrRkFBa0Y7WUFDekZNLE1BQU0sRUFBRTtnQkFBQ0ssT0FBTTtnQkFBQ0UsT0FBTTtnQkFBQ0UsT0FBTTtnQkFBQ0MsSUFBRztnQkFBQ1UsRUFBRTthQUFDO1NBQ3hDLENBQUM7UUFDRixNQUFNRSxNQUFNLEdBQUdELFlBQVksQ0FBQ0UsWUFBWTtRQUV4QyxJQUFHRCxNQUFNLEVBQUM7WUFDUlgsUUFBTyxHQUFHLElBQUksQ0FBQztRQUNqQixPQUFNO1lBQ0xBLFFBQU8sR0FBRyxJQUFJLENBQUM7UUFDakIsQ0FBQztRQUVEZCxHQUFHLENBQUNJLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQ0MsSUFBSSxDQUFDO1lBQUNnQixRQUFRLEVBQUc7Z0JBQUNQLE9BQU8sRUFBQ0EsUUFBTztnQkFBRUcsU0FBUyxFQUFDUSxNQUFNO2FBQUM7U0FBQyxDQUFDLENBQUM7SUFDNUUsQ0FBQztBQUVMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9tYXRlcmlvLW11aS1yZWFjdC1uZXh0anMtYWRtaW4tdGVtcGxhdGUtZnJlZS8uL3NyYy9wYWdlcy9hcGkveWF6aWNpbGFyLmpzPzIyMjgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcXVlcnkgfSBmcm9tIFwic3JjL2xpYi9kYlwiXHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBoYW5kbGVyKHJlcSwgcmVzKSB7XHJcblxyXG4gICAgaWYgKHJlcS5tZXRob2QgPT09IFwiR0VUXCIpIHtcclxuICAgICAgICBjb25zdCBoaXptZXRsZXIgPSBhd2FpdCBxdWVyeSh7XHJcbiAgICAgICAgICAgIHF1ZXJ5OiBcIlNFTEVDVCAqIEZST00gdGJsX3lhemljaWxhclwiLFxyXG4gICAgICAgICAgICB2YWx1ZXM6IFtdLFxyXG4gICAgICAgIH0pO1xyXG4gICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsgaGl6bWV0bGVyOiBoaXptZXRsZXIgfSk7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKHJlcS5tZXRob2QgPT09IFwiUE9TVFwiKSB7XHJcbiAgICAgICAgY29uc3QgZGF0YXMgPSByZXEuYm9keTtcclxuICAgICAgICBjb25zdCBiYXNsaWsgPSBkYXRhcy55YXppY2lCYXNsaWdpO1xyXG4gICAgICAgIGNvbnN0IGljZXJpayA9IGRhdGFzLnlhemljaUljZXJpZ2k7XHJcbiAgICAgICAgY29uc3QgYmFubmVyID0gZGF0YXMuYmFubmVyO1xyXG4gICAgICAgIGNvbnN0IGltZyA9IGRhdGFzLmltZztcclxuICAgICAgICBsZXQgbWVzc2FnZSA9IFwiXCI7XHJcbiAgICAgICAgICBjb25zdCBhZGRIaXptZXQgPSBhd2FpdCBxdWVyeSh7XHJcbiAgICAgICAgICAgICAgcXVlcnk6IFwiSU5TRVJUIElOVE8gdGJsX3lhemljaWxhciAobmFtZSxjb250ZW50LGJhbm5lcixpbWcpIFZBTFVFUyAoPyw/LD8sPylcIixcclxuICAgICAgICAgICAgICB2YWx1ZXM6IFtiYXNsaWssaWNlcmlrLGJhbm5lcixpbWddLFxyXG4gICAgICAgICAgfSk7XHJcbiAgICAgICAgICBpZihhZGRIaXptZXQuaW5zZXJ0SWQpe1xyXG4gICAgICAgICAgICAgIG1lc3NhZ2UgPSBcIm9rXCI7XHJcbiAgICAgICAgICB9IGVsc2V7XHJcbiAgICAgICAgICAgICBtZXNzYWdlID0gXCJub1wiO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgbGV0IHNla3RvcmxlciA9IHtcclxuICAgICAgICAgICAgIGhpem1ldElkOiBhZGRIaXptZXQuaW5zZXJ0SWQsXHJcbiAgICAgICAgICAgICBoaXptZXRiYXNsaWs6ZGF0YXMuc2VrdG9yQmFzbGlnaVxyXG4gICAgICAgICAgfTtcclxuXHJcbiAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtyZXNwb25zZSA6IHttZXNzYWdlOm1lc3NhZ2UsIHNla3RvcmxlcjpzZWt0b3JsZXJ9fSk7XHJcbiAgICB9XHJcblxyXG5cclxuICAgIGlmKHJlcS5tZXRob2QgPT09IFwiREVMRVRFXCIpe1xyXG4gICAgICAgIGNvbnN0IGRhdGFzID0gcmVxLmJvZHk7XHJcbiAgICAgICAgbGV0IG1lc3NhZ2UgPSBcIlwiO1xyXG4gICAgICAgICBjb25zdCBkZWxsSGl6bWV0ID0gYXdhaXQgcXVlcnkoe1xyXG4gICAgICAgICAgICAgIHF1ZXJ5OiBcIkRFTEVURSBGUk9NIHRibF95YXppY2lsYXIgV0hFUkUgaWQgPSA/XCIsXHJcbiAgICAgICAgICAgICAgdmFsdWVzOiBbZGF0YXMuaWRdLFxyXG4gICAgICAgICAgfSk7XHJcbiAgICAgICAgICBpZihkZWxsSGl6bWV0KXtcclxuICAgICAgICAgICAgICBtZXNzYWdlID0gXCJva1wiO1xyXG4gICAgICAgICAgfSBlbHNle1xyXG4gICAgICAgICAgICAgbWVzc2FnZSA9IFwibm9cIjtcclxuICAgICAgICAgIH1cclxuICAgXHJcbiAgICAgICAgXHJcbiAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24oe3Jlc3BvbnNlOiB7bWVzc2FnZTptZXNzYWdlfX0pXHJcblxyXG4gICAgfVxyXG5cclxuICAgIGlmKHJlcS5tZXRob2QgPT09IFwiUFVUXCIpe1xyXG4gICAgICAgIGxldCBtZXNzYWdlID0gXCJcIjtcclxuICAgICAgICBjb25zdCBkYXRhcyA9IHJlcS5ib2R5O1xyXG4gICAgICAgIGNvbnN0IGJhc2xpayA9IGRhdGFzLnlhemljaUJhc2xpZ2k7XHJcbiAgICAgICAgY29uc3QgaWNlcmlrID0gZGF0YXMueWF6aWNpSWNlcmlnaTtcclxuICAgICAgICBjb25zdCBiYW5uZXIgPSBkYXRhcy5iYW5uZXI7XHJcbiAgICAgICAgY29uc3QgaW1nID0gZGF0YXMuaW1nO1xyXG4gICAgICAgIGNvbnN0IGlkID0gZGF0YXMuaWQ7XHJcblxyXG4gICAgICAgICAgY29uc3QgdXBkYXRlSGl6bWV0ID0gYXdhaXQgcXVlcnkoe1xyXG4gICAgICAgICAgICAgIHF1ZXJ5OiBcIlVQREFURSB0YmxfeWF6aWNpbGFyIFNFVCBuYW1lID0gPywgY29udGVudCA9ID8sIGJhbm5lciA9ID8sIGltZyA9ID8gV0hFUkUgaWQgPSA/XCIsXHJcbiAgICAgICAgICAgICAgdmFsdWVzOiBbYmFzbGlrLGljZXJpayxiYW5uZXIsaW1nLGlkXSxcclxuICAgICAgICAgIH0pO1xyXG4gICAgICAgICAgY29uc3QgcmVzdWx0ID0gdXBkYXRlSGl6bWV0LmFmZmVjdGVkUm93cztcclxuXHJcbiAgICAgICAgICBpZihyZXN1bHQpe1xyXG4gICAgICAgICAgICBtZXNzYWdlID0gXCJva1wiO1xyXG4gICAgICAgICAgfSBlbHNle1xyXG4gICAgICAgICAgIG1lc3NhZ2UgPSBcIm5vXCI7XHJcbiAgICAgICAgIH1cclxuXHJcbiAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtyZXNwb25zZSA6IHttZXNzYWdlOm1lc3NhZ2UsIHNla3RvcmxlcjpyZXN1bHR9fSk7XHJcbiAgICB9XHJcblxyXG59Il0sIm5hbWVzIjpbInF1ZXJ5IiwiaGFuZGxlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsImhpem1ldGxlciIsInZhbHVlcyIsInN0YXR1cyIsImpzb24iLCJkYXRhcyIsImJvZHkiLCJiYXNsaWsiLCJ5YXppY2lCYXNsaWdpIiwiaWNlcmlrIiwieWF6aWNpSWNlcmlnaSIsImJhbm5lciIsImltZyIsIm1lc3NhZ2UiLCJhZGRIaXptZXQiLCJpbnNlcnRJZCIsInNla3RvcmxlciIsImhpem1ldElkIiwiaGl6bWV0YmFzbGlrIiwic2VrdG9yQmFzbGlnaSIsInJlc3BvbnNlIiwiZGVsbEhpem1ldCIsImlkIiwidXBkYXRlSGl6bWV0IiwicmVzdWx0IiwiYWZmZWN0ZWRSb3dzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./src/pages/api/yazicilar.js\n");
 
 /***/ })
 
@@ -156,7 +50,7 @@ async function handler(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(5511));
+var __webpack_exports__ = (__webpack_exec__("(api)/./src/pages/api/yazicilar.js"));
 module.exports = __webpack_exports__;
 
 })();
