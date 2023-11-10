@@ -36,9 +36,9 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "export": "next build && next export"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^40.0.0",
