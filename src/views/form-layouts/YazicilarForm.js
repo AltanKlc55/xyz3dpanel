@@ -11,7 +11,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import TextEditor from '../components/ckEditor/TextEditor'
 import Image from 'next/image'
-import axios from 'axios'
 
 const YazicilarForm = ({reDatas,closeModal}) => {
 
