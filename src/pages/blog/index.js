@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import BloglarForm from '../../views/form-layouts/BloglarForm'
 import SektorlerDuzenleForm from '../../views/form-layouts/SektorlerDuzenleForm'
 import TableStickyHeaderSektorler from '../../views/tables/TableStickyHeaderSektorler'
+import BloglarDuzenleForm from '../../views/form-layouts/BloglarDuzenleForm'
 
 const MUITable = () => {
 
@@ -113,8 +114,8 @@ const MUITable = () => {
            aria-describedby="child-modal-description"
          >
          <Box sx={{ ...style, width: 800 }}>
-           <h2 id="child-modal-title">Yeni Hizmet Ekle</h2>
-              <SektorlerDuzenleForm dataUpdates={updatedData} reDatas={rastgeleSayiUret} closeModal={handleUpdateClose}/>
+           <h2 id="child-modal-title">Blog Düzenle</h2>
+              <BloglarDuzenleForm dataUpdates={updatedData} reDatas={rastgeleSayiUret} closeModal={handleUpdateClose}/>
            <Button onClick={handleUpdateClose} >İptal</Button>
          </Box>
        </Modal>

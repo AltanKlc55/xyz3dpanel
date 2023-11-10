@@ -52,8 +52,8 @@ export default async function handler(req, res) {
     if(req.method === "PUT"){
         let message = "";
         const datas = req.body;
-        const baslik = datas.hizmetBasligi;
-        const icerik = datas.hizmetIcerigi;
+        const baslik = datas.blogBasligi;
+        const icerik = datas.blogIcerigi;
         const banner = datas.banner;
         const img = datas.img;
         const id = datas.id;

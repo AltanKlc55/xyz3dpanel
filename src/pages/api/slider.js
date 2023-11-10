@@ -7,7 +7,7 @@ export default async function handler(req, res) {
             query: "SELECT * FROM tbl_slider",
             values: [],
         });
-        res.status(200).json({ hizmetler: hizmetler });
+        res.status(200).json({ sliders: hizmetler });
     }
 
     if (req.method === "POST") {

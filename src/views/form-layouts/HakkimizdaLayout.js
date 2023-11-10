@@ -63,7 +63,7 @@ const HakkimizdaLayout = ({dataAll,randData}) => {
 
     const formData = new FormData();
     
-    if(file === ""){
+    if(file !== ""){
     try {
       formData.append("nedenBiz", file);
     } catch (error) {
@@ -74,7 +74,7 @@ const HakkimizdaLayout = ({dataAll,randData}) => {
        imagesOld["nedenBiz"] = txt[2];
     }
 
-   if(hakkimizdaFile === ""){
+   if(hakkimizdaFile !== ""){
     try {
       formData.append("hakkimizdaImg", hakkimizdaFile);
     } catch (error) {
@@ -85,7 +85,7 @@ const HakkimizdaLayout = ({dataAll,randData}) => {
        imagesOld["hakkimizdaImg"] = txts[2];
     }
 
-    if(bannerfile === ""){
+    if(bannerfile !== ""){
       try {
         formData.append("bannerImg", bannerfile);
       } catch (error) {

@@ -24,6 +24,7 @@ export default function TextEditor({onChange,contentsforupdate}) {
         init={{
           height: 500,
           menubar: 'file edit view insert format tools table',
+          extended_valid_elements: 'i[class]',
           plugins: [
             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
@@ -35,7 +36,7 @@ export default function TextEditor({onChange,contentsforupdate}) {
             'removeformat | help',
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
 		   image_uploadtab: true,
-		   images_upload_url: 'http://localhost:3000/uploads/',
+		   images_upload_url: process.env.NEXT_PUBLIC_NEXT_PUBLUC_URL+'/uploads/',
         }}
       />
     </>

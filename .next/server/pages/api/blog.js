@@ -1,45 +1,151 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/blog";
-exports.ids = ["pages/api/blog"];
+exports.id = 4745;
+exports.ids = [4745];
 exports.modules = {
 
-/***/ "mysql2/promise":
-/*!*********************************!*\
-  !*** external "mysql2/promise" ***!
-  \*********************************/
-/***/ ((module) => {
+/***/ 2764:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-module.exports = require("mysql2/promise");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "I": () => (/* binding */ query)
+});
+
+;// CONCATENATED MODULE: external "mysql2/promise"
+const promise_namespaceObject = require("mysql2/promise");
+var promise_default = /*#__PURE__*/__webpack_require__.n(promise_namespaceObject);
+;// CONCATENATED MODULE: ./src/lib/db.js
+
+async function query({ query , values =[]  }) {
+    const dbconnection = await promise_default().createConnection({
+        host: "localhost",
+        database: "test",
+        user: "root",
+        password: "",
+        charset: "utf8mb4"
+    });
+    try {
+        const [results] = await dbconnection.execute(query, values);
+        dbconnection.end();
+        return results;
+    } catch (error) {
+        throw Error(error.message);
+        return {
+            error
+        };
+    }
+}
+
 
 /***/ }),
 
-/***/ "(api)/./src/lib/db.js":
-/*!***********************!*\
-  !*** ./src/lib/db.js ***!
-  \***********************/
+/***/ 3685:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"query\": () => (/* binding */ query)\n/* harmony export */ });\n/* harmony import */ var mysql2_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mysql2/promise */ \"mysql2/promise\");\n/* harmony import */ var mysql2_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mysql2_promise__WEBPACK_IMPORTED_MODULE_0__);\n\nasync function query({ query , values =[]  }) {\n    const dbconnection = await mysql2_promise__WEBPACK_IMPORTED_MODULE_0___default().createConnection({\n        host: \"localhost\",\n        database: \"test\",\n        user: \"root\",\n        password: \"\",\n        charset: \"utf8mb4\"\n    });\n    try {\n        const [results] = await dbconnection.execute(query, values);\n        dbconnection.end();\n        return results;\n    } catch (error) {\n        throw Error(error.message);\n        return {\n            error\n        };\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9zcmMvbGliL2RiLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFtQztBQUU1QixlQUFlQyxLQUFLLENBQUMsRUFBRUEsS0FBSyxHQUFFQyxNQUFNLEVBQUcsRUFBRSxHQUFFLEVBQUU7SUFFaEQsTUFBTUMsWUFBWSxHQUFHLE1BQU1ILHNFQUFzQixDQUFDO1FBQzlDSyxJQUFJLEVBQUVDLFdBQWtDO1FBQ3hDRyxRQUFRLEVBQUVILE1BQXNDO1FBQ2hESyxJQUFJLEVBQUVMLE1BQWtDO1FBQ3hDTyxRQUFRLEVBQUVQLEVBQXNDO1FBQ2hEUyxPQUFPLEVBQUUsU0FBUztLQUNyQixDQUFDO0lBRUYsSUFBSTtRQUNBLE1BQU0sQ0FBQ0MsT0FBTyxDQUFDLEdBQUcsTUFBTWIsWUFBWSxDQUFDYyxPQUFPLENBQUNoQixLQUFLLEVBQUVDLE1BQU0sQ0FBQztRQUMzREMsWUFBWSxDQUFDZSxHQUFHLEVBQUUsQ0FBQztRQUNuQixPQUFPRixPQUFPLENBQUM7SUFDbkIsRUFFQSxPQUFPRyxLQUFLLEVBQUU7UUFDVixNQUFNQyxLQUFLLENBQUNELEtBQUssQ0FBQ0UsT0FBTyxDQUFDLENBQUM7UUFDM0IsT0FBTztZQUFFRixLQUFLO1NBQUUsQ0FBQztJQUNyQixDQUFDO0FBRUwsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL21hdGVyaW8tbXVpLXJlYWN0LW5leHRqcy1hZG1pbi10ZW1wbGF0ZS1mcmVlLy4vc3JjL2xpYi9kYi5qcz83ZjlhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBteXNxbCBmcm9tIFwibXlzcWwyL3Byb21pc2VcIjtcclxuXHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBxdWVyeSh7IHF1ZXJ5LCB2YWx1ZXMgPSBbXSB9KSB7XHJcblxyXG4gICAgY29uc3QgZGJjb25uZWN0aW9uID0gYXdhaXQgbXlzcWwuY3JlYXRlQ29ubmVjdGlvbih7XHJcbiAgICAgICAgaG9zdDogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfSE9TVCxcclxuICAgICAgICBkYXRhYmFzZTogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfREFUQUJBU0UsXHJcbiAgICAgICAgdXNlcjogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfVVNFUixcclxuICAgICAgICBwYXNzd29yZDogcHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfTVlTUUxfUEFTU1dPUkQsXHJcbiAgICAgICAgY2hhcnNldDogJ3V0ZjhtYjQnLFxyXG4gICAgfSk7XHJcblxyXG4gICAgdHJ5IHtcclxuICAgICAgICBjb25zdCBbcmVzdWx0c10gPSBhd2FpdCBkYmNvbm5lY3Rpb24uZXhlY3V0ZShxdWVyeSwgdmFsdWVzKTtcclxuICAgICAgICBkYmNvbm5lY3Rpb24uZW5kKCk7XHJcbiAgICAgICAgcmV0dXJuIHJlc3VsdHM7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgIHRocm93IEVycm9yKGVycm9yLm1lc3NhZ2UpO1xyXG4gICAgICAgIHJldHVybiB7IGVycm9yIH07XHJcbiAgICB9XHJcblxyXG59Il0sIm5hbWVzIjpbIm15c3FsIiwicXVlcnkiLCJ2YWx1ZXMiLCJkYmNvbm5lY3Rpb24iLCJjcmVhdGVDb25uZWN0aW9uIiwiaG9zdCIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19NWVNRTF9IT1NUIiwiZGF0YWJhc2UiLCJORVhUX1BVQkxJQ19NWVNRTF9EQVRBQkFTRSIsInVzZXIiLCJORVhUX1BVQkxJQ19NWVNRTF9VU0VSIiwicGFzc3dvcmQiLCJORVhUX1BVQkxJQ19NWVNRTF9QQVNTV09SRCIsImNoYXJzZXQiLCJyZXN1bHRzIiwiZXhlY3V0ZSIsImVuZCIsImVycm9yIiwiRXJyb3IiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./src/lib/db.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+/* harmony import */ var src_lib_db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2764);
 
-/***/ }),
+async function handler(req, res) {
+    if (req.method === "GET") {
+        const hizmetler = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
+            query: "SELECT * FROM tbl_blog",
+            values: []
+        });
+        res.status(200).json({
+            hizmetler: hizmetler
+        });
+    }
+    if (req.method === "POST") {
+        const datas = req.body;
+        const baslik = datas.blogBasligi;
+        const icerik = datas.blogIcerigi;
+        const banner = datas.banner;
+        const img = datas.img;
+        let message = "";
+        const addHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
+            query: "INSERT INTO tbl_blog (name,content,banner,img) VALUES (?,?,?,?)",
+            values: [
+                baslik,
+                icerik,
+                banner,
+                img
+            ]
+        });
+        if (addHizmet.insertId) {
+            message = "ok";
+        } else {
+            message = "no";
+        }
+        let hizmetler1 = {
+            hizmetId: addHizmet.insertId,
+            hizmetbaslik: datas.hizmetBasligi
+        };
+        res.status(200).json({
+            response: {
+                message: message,
+                hizmetler: hizmetler1
+            }
+        });
+    }
+    if (req.method === "DELETE") {
+        const datas1 = req.body;
+        let message1 = "";
+        const dellHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
+            query: "DELETE FROM tbl_blog WHERE id = ?",
+            values: [
+                datas1.id
+            ]
+        });
+        if (dellHizmet) {
+            message1 = "ok";
+        } else {
+            message1 = "no";
+        }
+        res.status(200).json({
+            response: {
+                message: message1
+            }
+        });
+    }
+    if (req.method === "PUT") {
+        let message2 = "";
+        const datas2 = req.body;
+        const baslik1 = datas2.blogBasligi;
+        const icerik1 = datas2.blogIcerigi;
+        const banner1 = datas2.banner;
+        const img1 = datas2.img;
+        const id = datas2.id;
+        const updateHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .query */ .I)({
+            query: "UPDATE tbl_blog SET name = ?, content = ?, banner = ?, img = ? WHERE id = ?",
+            values: [
+                baslik1,
+                icerik1,
+                banner1,
+                img1,
+                id
+            ]
+        });
+        const result = updateHizmet.affectedRows;
+        if (result) {
+            message2 = "ok";
+        } else {
+            message2 = "no";
+        }
+        res.status(200).json({
+            response: {
+                message: message2,
+                hizmetler: result
+            }
+        });
+    }
+}
 
-/***/ "(api)/./src/pages/api/blog.js":
-/*!*******************************!*\
-  !*** ./src/pages/api/blog.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var src_lib_db__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/lib/db */ \"(api)/./src/lib/db.js\");\n\nasync function handler(req, res) {\n    if (req.method === \"GET\") {\n        const hizmetler = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"SELECT * FROM tbl_blog\",\n            values: []\n        });\n        res.status(200).json({\n            hizmetler: hizmetler\n        });\n    }\n    if (req.method === \"POST\") {\n        const datas = req.body;\n        const baslik = datas.blogBasligi;\n        const icerik = datas.blogIcerigi;\n        const banner = datas.banner;\n        const img = datas.img;\n        let message = \"\";\n        const addHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"INSERT INTO tbl_blog (name,content,banner,img) VALUES (?,?,?,?)\",\n            values: [\n                baslik,\n                icerik,\n                banner,\n                img\n            ]\n        });\n        if (addHizmet.insertId) {\n            message = \"ok\";\n        } else {\n            message = \"no\";\n        }\n        let hizmetler1 = {\n            hizmetId: addHizmet.insertId,\n            hizmetbaslik: datas.hizmetBasligi\n        };\n        res.status(200).json({\n            response: {\n                message: message,\n                hizmetler: hizmetler1\n            }\n        });\n    }\n    if (req.method === \"DELETE\") {\n        const datas1 = req.body;\n        let message1 = \"\";\n        const dellHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"DELETE FROM tbl_blog WHERE id = ?\",\n            values: [\n                datas1.id\n            ]\n        });\n        if (dellHizmet) {\n            message1 = \"ok\";\n        } else {\n            message1 = \"no\";\n        }\n        res.status(200).json({\n            response: {\n                message: message1\n            }\n        });\n    }\n    if (req.method === \"PUT\") {\n        let message2 = \"\";\n        const datas2 = req.body;\n        const baslik1 = datas2.hizmetBasligi;\n        const icerik1 = datas2.hizmetIcerigi;\n        const banner1 = datas2.banner;\n        const img1 = datas2.img;\n        const id = datas2.id;\n        const updateHizmet = await (0,src_lib_db__WEBPACK_IMPORTED_MODULE_0__.query)({\n            query: \"UPDATE tbl_blog SET name = ?, content = ?, banner = ?, img = ? WHERE id = ?\",\n            values: [\n                baslik1,\n                icerik1,\n                banner1,\n                img1,\n                id\n            ]\n        });\n        const result = updateHizmet.affectedRows;\n        if (result) {\n            message2 = \"ok\";\n        } else {\n            message2 = \"no\";\n        }\n        res.status(200).json({\n            response: {\n                message: message2,\n                hizmetler: result\n            }\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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LEdBQUdQLE1BQUssQ0FBQ08sR0FBRztRQUNyQixNQUFNUyxFQUFFLEdBQUdoQixNQUFLLENBQUNnQixFQUFFO1FBRWpCLE1BQU1FLFlBQVksR0FBRyxNQUFNM0IsaURBQUssQ0FBQztZQUM3QkEsS0FBSyxFQUFFLDZFQUE2RTtZQUNwRk0sTUFBTSxFQUFFO2dCQUFDSyxPQUFNO2dCQUFDRSxPQUFNO2dCQUFDRSxPQUFNO2dCQUFDQyxJQUFHO2dCQUFDUyxFQUFFO2FBQUM7U0FDeEMsQ0FBQztRQUNGLE1BQU1HLE1BQU0sR0FBR0QsWUFBWSxDQUFDRSxZQUFZO1FBRXhDLElBQUdELE1BQU0sRUFBQztZQUNSWCxRQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLE9BQU07WUFDTEEsUUFBTyxHQUFHLElBQUksQ0FBQztRQUNqQixDQUFDO1FBRURkLEdBQUcsQ0FBQ0ksTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDQyxJQUFJLENBQUM7WUFBQ2UsUUFBUSxFQUFHO2dCQUFDTixPQUFPLEVBQUNBLFFBQU87Z0JBQUVaLFNBQVMsRUFBQ3VCLE1BQU07YUFBQztTQUFDLENBQUMsQ0FBQztJQUM1RSxDQUFDO0FBRUwsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL21hdGVyaW8tbXVpLXJlYWN0LW5leHRqcy1hZG1pbi10ZW1wbGF0ZS1mcmVlLy4vc3JjL3BhZ2VzL2FwaS9ibG9nLmpzPzc0MWQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcXVlcnkgfSBmcm9tIFwic3JjL2xpYi9kYlwiXHJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIocmVxLCByZXMpIHtcclxuXHJcbiAgICBpZiAocmVxLm1ldGhvZCA9PT0gXCJHRVRcIikge1xyXG4gICAgICAgIGNvbnN0IGhpem1ldGxlciA9IGF3YWl0IHF1ZXJ5KHtcclxuICAgICAgICAgICAgcXVlcnk6IFwiU0VMRUNUICogRlJPTSB0YmxfYmxvZ1wiLFxyXG4gICAgICAgICAgICB2YWx1ZXM6IFtdLFxyXG4gICAgICAgIH0pO1xyXG4gICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsgaGl6bWV0bGVyOiBoaXptZXRsZXIgfSk7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKHJlcS5tZXRob2QgPT09IFwiUE9TVFwiKSB7XHJcbiAgICAgICAgY29uc3QgZGF0YXMgPSByZXEuYm9keTtcclxuICAgICAgICBjb25zdCBiYXNsaWsgPSBkYXRhcy5ibG9nQmFzbGlnaTtcclxuICAgICAgICBjb25zdCBpY2VyaWsgPSBkYXRhcy5ibG9nSWNlcmlnaTtcclxuICAgICAgICBjb25zdCBiYW5uZXIgPSBkYXRhcy5iYW5uZXI7XHJcbiAgICAgICAgY29uc3QgaW1nID0gZGF0YXMuaW1nO1xyXG4gICAgICAgIGxldCBtZXNzYWdlID0gXCJcIjtcclxuICAgICAgICAgIGNvbnN0IGFkZEhpem1ldCA9IGF3YWl0IHF1ZXJ5KHtcclxuICAgICAgICAgICAgICBxdWVyeTogXCJJTlNFUlQgSU5UTyB0YmxfYmxvZyAobmFtZSxjb250ZW50LGJhbm5lcixpbWcpIFZBTFVFUyAoPyw/LD8sPylcIixcclxuICAgICAgICAgICAgICB2YWx1ZXM6IFtiYXNsaWssaWNlcmlrLGJhbm5lcixpbWddLFxyXG4gICAgICAgICAgfSk7XHJcbiAgICAgICAgICBpZihhZGRIaXptZXQuaW5zZXJ0SWQpe1xyXG4gICAgICAgICAgICAgIG1lc3NhZ2UgPSBcIm9rXCI7XHJcbiAgICAgICAgICB9IGVsc2V7XHJcbiAgICAgICAgICAgICBtZXNzYWdlID0gXCJub1wiO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgbGV0IGhpem1ldGxlciA9IHtcclxuICAgICAgICAgICAgIGhpem1ldElkOiBhZGRIaXptZXQuaW5zZXJ0SWQsXHJcbiAgICAgICAgICAgICBoaXptZXRiYXNsaWs6ZGF0YXMuaGl6bWV0QmFzbGlnaVxyXG4gICAgICAgICAgfTtcclxuXHJcbiAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtyZXNwb25zZSA6IHttZXNzYWdlOm1lc3NhZ2UsIGhpem1ldGxlcjpoaXptZXRsZXJ9fSk7XHJcbiAgICB9XHJcblxyXG5cclxuICAgICBpZihyZXEubWV0aG9kID09PSBcIkRFTEVURVwiKXtcclxuICAgICAgIGNvbnN0IGRhdGFzID0gcmVxLmJvZHk7XHJcbiAgICAgICBsZXQgbWVzc2FnZSA9IFwiXCI7XHJcbiAgICAgICAgY29uc3QgZGVsbEhpem1ldCA9IGF3YWl0IHF1ZXJ5KHtcclxuICAgICAgICAgICAgIHF1ZXJ5OiBcIkRFTEVURSBGUk9NIHRibF9ibG9nIFdIRVJFIGlkID0gP1wiLFxyXG4gICAgICAgICAgICAgdmFsdWVzOiBbZGF0YXMuaWRdLFxyXG4gICAgICAgICB9KTtcclxuICAgICAgICAgaWYoZGVsbEhpem1ldCl7XHJcbiAgICAgICAgICAgICBtZXNzYWdlID0gXCJva1wiO1xyXG4gICAgICAgICB9IGVsc2V7XHJcbiAgICAgICAgICAgIG1lc3NhZ2UgPSBcIm5vXCI7XHJcbiAgICAgICAgIH1cclxuICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtyZXNwb25zZToge21lc3NhZ2U6bWVzc2FnZX19KVxyXG4gICAgIH1cclxuXHJcbiAgICBpZihyZXEubWV0aG9kID09PSBcIlBVVFwiKXtcclxuICAgICAgICBsZXQgbWVzc2FnZSA9IFwiXCI7XHJcbiAgICAgICAgY29uc3QgZGF0YXMgPSByZXEuYm9keTtcclxuICAgICAgICBjb25zdCBiYXNsaWsgPSBkYXRhcy5oaXptZXRCYXNsaWdpO1xyXG4gICAgICAgIGNvbnN0IGljZXJpayA9IGRhdGFzLmhpem1ldEljZXJpZ2k7XHJcbiAgICAgICAgY29uc3QgYmFubmVyID0gZGF0YXMuYmFubmVyO1xyXG4gICAgICAgIGNvbnN0IGltZyA9IGRhdGFzLmltZztcclxuICAgICAgICBjb25zdCBpZCA9IGRhdGFzLmlkO1xyXG5cclxuICAgICAgICAgIGNvbnN0IHVwZGF0ZUhpem1ldCA9IGF3YWl0IHF1ZXJ5KHtcclxuICAgICAgICAgICAgICBxdWVyeTogXCJVUERBVEUgdGJsX2Jsb2cgU0VUIG5hbWUgPSA/LCBjb250ZW50ID0gPywgYmFubmVyID0gPywgaW1nID0gPyBXSEVSRSBpZCA9ID9cIixcclxuICAgICAgICAgICAgICB2YWx1ZXM6IFtiYXNsaWssaWNlcmlrLGJhbm5lcixpbWcsaWRdLFxyXG4gICAgICAgICAgfSk7XHJcbiAgICAgICAgICBjb25zdCByZXN1bHQgPSB1cGRhdGVIaXptZXQuYWZmZWN0ZWRSb3dzO1xyXG5cclxuICAgICAgICAgIGlmKHJlc3VsdCl7XHJcbiAgICAgICAgICAgIG1lc3NhZ2UgPSBcIm9rXCI7XHJcbiAgICAgICAgICB9IGVsc2V7XHJcbiAgICAgICAgICAgbWVzc2FnZSA9IFwibm9cIjtcclxuICAgICAgICAgfVxyXG5cclxuICAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24oe3Jlc3BvbnNlIDoge21lc3NhZ2U6bWVzc2FnZSwgaGl6bWV0bGVyOnJlc3VsdH19KTtcclxuICAgIH1cclxuXHJcbn0iXSwibmFtZXMiOlsicXVlcnkiLCJoYW5kbGVyIiwicmVxIiwicmVzIiwibWV0aG9kIiwiaGl6bWV0bGVyIiwidmFsdWVzIiwic3RhdHVzIiwianNvbiIsImRhdGFzIiwiYm9keSIsImJhc2xpayIsImJsb2dCYXNsaWdpIiwiaWNlcmlrIiwiYmxvZ0ljZXJpZ2kiLCJiYW5uZXIiLCJpbWciLCJtZXNzYWdlIiwiYWRkSGl6bWV0IiwiaW5zZXJ0SWQiLCJoaXptZXRJZCIsImhpem1ldGJhc2xpayIsImhpem1ldEJhc2xpZ2kiLCJyZXNwb25zZSIsImRlbGxIaXptZXQiLCJpZCIsImhpem1ldEljZXJpZ2kiLCJ1cGRhdGVIaXptZXQiLCJyZXN1bHQiLCJhZmZlY3RlZFJvd3MiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./src/pages/api/blog.js\n");
 
 /***/ })
 
@@ -50,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./src/pages/api/blog.js"));
+var __webpack_exports__ = (__webpack_exec__(3685));
 module.exports = __webpack_exports__;
 
 })();

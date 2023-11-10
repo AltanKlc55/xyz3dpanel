@@ -14,7 +14,7 @@ const navigation = () => {
     {
       title: 'Selam...',
       icon: HomeOutline,
-      path: '/'
+      path: '/dashboard'
     },
     {
       sectionTitle: 'Sayfalar'

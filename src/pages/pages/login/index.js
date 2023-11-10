@@ -130,12 +130,7 @@ const LoginPage = () => {
               onClick={() => { 
                 if(values.password !== "" || email !== ""){
                 login(email, values.password);
-                if(user.username !== ""){
-                  router.push("/");
-                }else{
-                 setHata("Bilgiler Hatalı");
-              }
-              }
+               }
               }}
             >
               Giriş

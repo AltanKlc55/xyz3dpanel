@@ -6,7 +6,7 @@ export default async function handler(req, res) {
             query: "SELECT * FROM tbl_hakkimizda where id = 1",
             values: [],
         });
-        res.status(200).json({ hizmetler: hizmetler });
+        res.status(200).json({ hakkimizda: hizmetler });
     }
 
 

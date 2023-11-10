@@ -36,8 +36,8 @@
   ],
   "scripts": {
     "dev": "next dev",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "start": "next start",
     "export": "next build && next export"
   },
   "dependencies": {

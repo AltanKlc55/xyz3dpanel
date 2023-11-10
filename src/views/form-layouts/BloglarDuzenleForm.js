@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 import TextEditor from '../components/ckEditor/TextEditor'
 import Image from 'next/image'
 
-const HizmetlerDuzenleForm = ({dataUpdates}) => {
+const BloglarDuzenleForm = ({dataUpdates,reDatas,closeModal}) => {
 
   const [editorLoaded, setEditorLoaded] = useState(false);
   const [selectedBannerFile, setSelectedBannerFile] = useState("/uploads/"+dataUpdates.banner);
@@ -98,7 +98,8 @@ const HizmetlerDuzenleForm = ({dataUpdates}) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_PUBLUC_URL}/api/blog`,postData)
     const response = await res.json();
     console.log(response);
-    
+    reDatas();
+    closeModal();
   };
 
 
@@ -201,4 +202,4 @@ const HizmetlerDuzenleForm = ({dataUpdates}) => {
   )
 }
 
-export default HizmetlerDuzenleForm;
+export default BloglarDuzenleForm;

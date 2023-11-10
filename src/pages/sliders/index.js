@@ -71,7 +71,7 @@ const MUITable = () => {
        fetch(`${process.env.NEXT_PUBLIC_NEXT_PUBLUC_URL}/api/slider`,
     postData);
     const response = await res.json();
-    setTableData(response.hizmetler);
+    setTableData(response.sliders);
   }
 
   useEffect(() => {
